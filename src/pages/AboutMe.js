@@ -2,8 +2,9 @@ import React from "react";
 import MainPic from "../components/mainPic";
 
 const AboutMe = () => {
+ 
   return (
-    <div >
+    <div>
       <section className="section_text">
         <div className="container">
           <header className="major">
@@ -11,8 +12,8 @@ const AboutMe = () => {
           </header>
           <p className="major_tex">My name is Karoly kertesz I</p>
         </div>
+        <MainPic />
       </section>
-      <MainPic />
     </div>
   );
 };

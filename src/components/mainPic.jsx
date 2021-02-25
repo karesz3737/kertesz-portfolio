@@ -1,11 +1,18 @@
 import React from "react";
+// import "../../public/images/KerteszKaroly.jpg"
 
 const mainPic = () => {
+  const background = "../../public/images/KerteszKaroly.jpg";
+  // style={{ backgroundImage: `url(${process.env.PUBLIC_URL + background})` }}
+
   return (
-    <div>
+    <div className="container-fluid">
       <section className="header_main">
         <div className="image_inner">
-          <img src={`${process.env.PUBLIC_URL}/images/kerteszkaroly.jpg`} />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/kerteszkaroly.jpg`}
+            alt="kertesz"
+          />
         </div>
         <div className="head_left">
           <blockquote>
@@ -16,6 +23,7 @@ const mainPic = () => {
           </blockquote>
         </div>
       </section>
+      //{" "}
     </div>
   );
 };

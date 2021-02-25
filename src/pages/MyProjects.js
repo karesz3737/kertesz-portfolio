@@ -1,126 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DTobj from "../data/data";
+import { Card } from "react-bootstrap";
 
 const MyProjects = () => {
+  const background = "/images/grey.jpg";
+
   return (
-    <div className="main">
-      <section id="three">
-        <div className="container">
-          <h3>My Projects</h3>
-          <p>
-            Integer eu ante ornare amet commetus vestibulum blandit integer in
-            curae ac faucibus integer non. Adipiscing cubilia elementum integer.
-            Integer eu ante ornare amet commetus.
-          </p>
-          <div className="features">
-            <article>
-              <Link class="image" to="/item">
-                <img
-                  src={`${process.env.PUBLIC_URL}/Restauran-app-screens/Main.png`}
-                  alt="RestaurantApp MainScreen"
-                />
-              </Link>
-              <div className="inner-div">
-                <ul>
-                  <a href="#">
-                    <li>
-                      <span className="fab fa-github fa-3x"></span>
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>
-                      <div className="img-inn"></div>
-                    </li>
-                  </a>
-                </ul>
-              </div>
-              <div className="inner">
-                <h4>Possibly broke spacetime</h4>
-                <p>Technologies used:</p>
-                <div classname="technologies">
-                  <ul>
-                    <li className="tech-items react"></li>
-                    <li className="tech-items react-native"></li>
-                    <li className="tech-items redux"></li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <a className="image">
-                <img src={`${process.env.PUBLIC_URL}/Flascards/DEck.png`} />
-              </a>
-              <a className="image">
-                <img
-                  src={`${process.env.PUBLIC_URL}/Flascards/android/Qustions.png`}
-                />
-              </a>
-              <a className="image">
-                <img
-                  src={`${process.env.PUBLIC_URL}/Flascards/android/DEck.png`}
-                />
-              </a>
-              <div className="inner-div">
-                <ul>
-                  <a href="#">
-                    <li>
-                      <span className="fab fa-github fa-3x"></span>
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>
-                      <div className="img-inn"></div>
-                    </li>
-                  </a>
-                </ul>
-              </div>
-              <div className="inner">
-                <h4>Terraformed a small moon</h4>
-                <p>Technologies used:</p>
-                <div className="technologies">
-                  <ul>
-                    <li className="tech-items react"></li>
-                    <li className="tech-items react-native"></li>
-                    <li className="tech-items redux"></li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <a href="#" className="image">
-                <img src="images/pic03.jpg" alt="" />
-              </a>
-              <div className="inner">
-                <h4>Snapped dark matter in the wild</h4>
-                <p>
-                  Integer eu ante ornare amet commetus vestibulum blandit
-                  integer in curae ac faucibus integer adipiscing ornare amet.
-                </p>
-                <div className="technologies">
-                  <ul>
-                    <li className="tech-items react"></li>
-                    <li className="tech-items redux"></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="inner-div">
-                <ul>
-                  <a href="#">
-                    <li>
-                      <span className="fab fa-github fa-3x"></span>
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>
-                      <div className="img-inn"></div>
-                    </li>
-                  </a>
-                </ul>
-              </div>
-            </article>
+    <div
+      style={{
+        height: "100vh",
+      }}
+      className="conatiner pt-lg-3"
+    >
+      {DTobj.map((item) => (
+        <div
+          className="pt-5 mb-4 mb-lg-0 pt-lg-1 mb-lg-2 col-12 col-md-8 col-lg-6 mx-auto pr-0 my-project"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
+          }}
+          key={item.id}
+        >
+          <div className="card-cont ">
+            <div className="img-cont">
+              <img
+                src={process.env.PUBLIC_URL + item.titlePhoto}
+                className="mr-2 pr-2"
+              />
+            </div>
+            <div className="tech-cont">
+              <p className="mt-md-2 mt-lg-3">{item.title}</p>
+              <p className="mt-2">{item.description}</p>
+              <ul className="d-flex align-items-center justify-content-start justify-content-md-center">
+                {item.icon.map((it) => (
+                  <li className="icon-images-back">
+                    <img src={process.env.PUBLIC_URL + it} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="d-flex justify-content-center flex-row pb-3 align-items-center">
+            <Link to={`/${item.id}`}>
+              <i className="far fa-images icon solid fa-2x icon-project pr-4 mr-md-4 m-lg-1"></i>
+            </Link>
+            <Link to={`/${item.id}`}>
+              <i className="fab fa-github solid fa-2x icon-project pl-5 ml-md-5 m-lg-1"></i>
+            </Link>
           </div>
         </div>
-      </section>
+      ))}
     </div>
   );
 };
