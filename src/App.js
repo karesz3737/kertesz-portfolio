@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import AboutMe from "./pages/AboutMe";
@@ -8,9 +8,12 @@ import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
+import FormModal from "./components/FormModal";
+import { Button } from "react-bootstrap";
 
 function App() {
   const background = "/images/wallpi.jpg";
+
   return (
     <div
       style={{

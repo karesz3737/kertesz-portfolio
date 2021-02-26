@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import FormModal from "../components/FormModal";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+  const setM = () => {
+    setShowModal(true);
+    console.log("modal.....");
+  };
+
   return (
     <div className="footer_main">
+      <FormModal show={showModal} onHide={() => setShowModal(false)} />
+
       <div className="nav_button">
         <ul className="icons">
           <li>
@@ -18,13 +28,12 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Link to="/contact" className="icon solid fa-envelope">
-              <span className="label">Email</span>
-            </Link>
+            <span className="label" onClick={() => setM()}>
+              <span className="icon solid fa-envelope"></span>
+            </span>
           </li>
         </ul>
       </div>
-
       <section className="left">
         <div className="container-fluid">
           <ul className="copyright">

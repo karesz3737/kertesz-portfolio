@@ -6,7 +6,7 @@ div,
 span,
 applet,
 object,
-iframe,
+/* iframe, */
 h1,
 h2,
 h3,
@@ -118,6 +118,49 @@ body {
   height: 100%;
 }
 
+
+
+
+
+
+.g-recaptcha {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+@media screen and (min-width: 1290px) {
+  .g-recaptcha {
+    display: block;
+    margin-top: -80px;
+    float: right;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  .g-recaptcha {
+    width: 250px;
+    margin-left: 190px;
+
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  .g-recaptcha {
+    width: 200px;
+    margin-left: 60px;
+  }
+
+}
+
+
+
+
 .nav_text {
   text-transform: uppercase;
   font-size: 18px;
@@ -213,11 +256,25 @@ a {
   text-decoration: none;
 }
 
-.section_text {
-  position: fixed;
+.modal_title {
+  background-color: #c8f3e8;
+  text-align: center;
+  border-radius: 2px;
+  font-family: "Lato";
+}
+
+.modal_title_warning {
+  background-color: rgb(240, 240, 171);
+  text-align: center;
+  border-radius: 2px;
+  font-family: "Lato";
 }
 
 
+
+.section_text {
+  position: fixed;
+}
 
 .inner-div ul li {
   padding: 10px;
@@ -259,7 +316,6 @@ a {
   }
 }
 
-
 #hy {
   width: 160px !important;
   height: 284px !important;
@@ -270,15 +326,11 @@ a {
     height: 443px !important;
     width: 250px !important;
   }
-
 }
-
-
 
 .may-car {
   height: 350px !important;
   width: 197px !important;
-
 }
 
 .icon-project {
@@ -332,10 +384,6 @@ span.carousel-control-prev-icon {
 .inner-div ul a li {
   padding: 10px;
   text-decoration: none;
-}
-
-#contact-form {
-  height: 100px !important;
 }
 
 #error {
@@ -2870,7 +2918,6 @@ input[type="button"]:disabled,
   padding-top: 2em !important;
   /* padding-bottom: 1em !important; */
 }
-
 
 .nav_button ul {
   display: flex;
