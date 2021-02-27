@@ -33,7 +33,7 @@ const MyProjects = () => {
               <p className="mt-2">{item.description}</p>
               <ul className="d-flex align-items-center justify-content-start justify-content-md-center">
                 {item.icon.map((it) => (
-                  <li className="icon-images-back">
+                  <li className="icon-images-back" style={{ marginTop: "0" }}>
                     <img src={process.env.PUBLIC_URL + it} />
                   </li>
                 ))}

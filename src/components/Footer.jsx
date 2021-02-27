@@ -17,13 +17,19 @@ const Footer = () => {
       <div className="nav_button">
         <ul className="icons">
           <li>
-            <a href="https://google.com" className="icon brands fa-facebook-f">
-              <span className="label">Facebook</span>
-            </a>
+            <a
+              href="https://www.linkedin.com/in/karolykertesz"
+              className="icon brands fab fa-linkedin"
+              target="_blank"
+            ></a>
           </li>
 
           <li>
-            <a href="https://google.com" className="icon brands fa-github">
+            <a
+              href="https://github.com/karolykertesz"
+              className="icon brands fa-github"
+              target="_blank"
+            >
               <span className="label">Github</span>
             </a>
           </li>

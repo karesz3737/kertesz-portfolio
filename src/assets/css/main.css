@@ -236,9 +236,13 @@ a {
   -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  /* border-bottom: solid 1px #e4e4e4; */
+
   color: inherit;
   text-decoration: none;
+}
+
+.my-t span {
+  font-family: "Merriweather";
 }
 
 .inner-div {
@@ -254,6 +258,10 @@ a {
   justify-content: baseline;
   align-items: center;
   text-decoration: none;
+}
+
+.thing_c {
+  color: #e9a528;
 }
 
 .modal_title {
@@ -316,17 +324,75 @@ a {
   }
 }
 
-#hy {
-  width: 160px !important;
-  height: 284px !important;
+.img_carusel {
+  border-radius: 3%;
+  height: 520px;
 }
 
-@media screen and (min-width: 750px) {
-  #hy {
-    height: 443px !important;
-    width: 250px !important;
+.carusel_icon {
+  width: 300px;
+  margin-top: 200px;
+
+
+}
+
+.carusel_top {
+  margin-top: 20px;
+  position: fixed;
+  margin-top: 150px
+}
+
+.bg-top-bb {
+  width: 400px;
+  border-radius: 5%;
+
+}
+
+.bg-top-bb span {
+  font-weight: 800;
+  font-family: "Lato";
+  color: black;
+}
+
+@media screen and (max-width: 650px) {
+
+  .img_carusel {
+    height: 350px;
+
+  }
+
+  .carusel_icon {
+
+    width: 200px;
+  }
+
+  .bg-top-bb {
+    width: 350px;
+
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .carusel_top {
+    margin-top: 50px;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+
+  .carusel_top {
+    margin-top: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
   }
 }
+
 
 .may-car {
   height: 350px !important;
@@ -2077,6 +2143,7 @@ header.major h2+p {
   margin: 3.375em 0;
   font-size: 1em;
   font-weight: 600;
+  font-family: 'Merriweather'
 }
 
 /* Form */
@@ -2569,11 +2636,11 @@ ul.feature-icons li :before {
   line-height: 1;
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
+  font-weight: 600;
 }
 
 ul.feature-icons li:before {
-  background: #3b7be3;
+  background: #e9a528;
   border-radius: 100%;
   color: #ffffff;
   display: block;
@@ -2599,6 +2666,7 @@ ul.icons li {
   padding: 1em 1em 0 0;
   color: #fff;
   padding: 10px 100px;
+
 }
 
 ul.icons li .icon:hover {
@@ -3320,6 +3388,7 @@ header .avatar {
   ul.feature-icons li {
     display: block;
     width: 100%;
+
   }
 
   /* Button */

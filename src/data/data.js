@@ -2,7 +2,7 @@ const DTobj = [
   {
     id: "flesh",
     title: "React Native Mobile Flash Cards App",
-    description: "React Native App made with React ,React Native and Redux",
+    description: " App made with React ,React Native and Redux",
     titlePhoto: "/Flascards/Succes.png",
     technologies: ["react", "react-native", "redux"],
     caruselPhotos: [

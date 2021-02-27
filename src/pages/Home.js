@@ -1,8 +1,7 @@
 import React from "react";
 import MainPic from "../components/mainPic";
 
-const AboutMe = () => {
- 
+const Home = () => {
   return (
     <div>
       <section className="section_text">
@@ -10,7 +9,11 @@ const AboutMe = () => {
           <header className="major">
             <h2>WELCOME</h2>
           </header>
-          <p className="major_tex">My name is Karoly kertesz I</p>
+          <p className="major_tex">
+            I'm Karoly Kertesz i'm a full-stack web developer from
+            Budapest,Hungary. <br />I have serious passion for creating
+            intuitive, dynamic user experiences.
+          </p>
         </div>
         <MainPic />
       </section>
@@ -18,4 +21,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default Home;

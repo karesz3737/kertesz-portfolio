@@ -13,7 +13,7 @@ const Navigation = () => {
               href="/"
               className="nav_li action-button shadow animate blue"
             >
-              <p className="nav_text"> About Me</p>
+              <p className="nav_text"> Home</p>
             </Nav.Link>
             <Nav.Link
               href="/things"

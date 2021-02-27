@@ -10,7 +10,6 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [text, Setmessage] = useState("");
   const [error, setErreor] = useState(null);
-  const [reverif, setReverif] = useState(false);
   const [token, SetToken] = useState("");
   const [showError, setShowError] = useState(false);
   const reRef = useRef();
@@ -20,11 +19,9 @@ const Contact = () => {
   const nameRef = useRef();
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
-    console.log(response);
   };
   const reChange = (value) => {
     SetToken(value);
-    setReverif(true);
   };
   const setRefBack = () => {
     setEmail("");

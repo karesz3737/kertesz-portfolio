@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import AboutMe from "./pages/AboutMe";
+import Home from "./pages/Home";
 import Things from "./pages/Things";
 import MyProjects from "./pages/MyProjects";
 import Contact from "./pages/Contact";
@@ -29,7 +29,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route exact path="/">
-            <AboutMe />
+            <Home />
           </Route>
           <Route component={Things} exact path="/things" />
           <Route component={MyProjects} exact path="/myprojects" />
