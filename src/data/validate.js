@@ -14,10 +14,14 @@ const validate = (v) => {
   if (!v.email.match(re_email)) {
     errorObj.email = "Please enter a valid email address!";
   }
-  if (!v.subject.match(re_text)) {
+  if (v.subject == null || v.subject === "") {
+    errorObj.subject = "Subject is empty please add a subject!";
+  } else if (!v.subject.match(re_text)) {
     errorObj.subject = "Special Characters Are not Allowed ";
   }
-  if (!v.text.match(re_text)) {
+  if (v.text == null || v.text === "") {
+    errorObj.text = "Your Message is empty please add a Message!";
+  } else if (!v.text.match(re_text)) {
     errorObj.text = "Special Characters Are not Allowed";
   }
 

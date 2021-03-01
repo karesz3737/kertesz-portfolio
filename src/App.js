@@ -8,8 +8,7 @@ import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
-import FormModal from "./components/FormModal";
-import { Button } from "react-bootstrap";
+import About from "./pages/About";
 
 function App() {
   const background = "/images/wallpi.jpg";
@@ -17,10 +16,10 @@ function App() {
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
-        backgroundPosition: "center center",
+        // backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
+        backgroundPosition: "center bottom",
         backgroundAttachment: "fixed",
-        height: "111vh",
+        height: "100vh",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
@@ -34,7 +33,10 @@ function App() {
           <Route component={Things} exact path="/things" />
           <Route component={MyProjects} exact path="/myprojects" />
           <Route component={Contact} exact path="/contact" />
-          <Route component={Carousel} exact path="/:id" />
+          <Route exact path="/aboutme">
+            <Route component={Carousel} exact path="/:id" />
+            <About />
+          </Route>
         </Switch>
         <Footer />
       </Router>

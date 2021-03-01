@@ -24,14 +24,7 @@ const ReCaptchaError = (props) => {
           </Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
-          {/* <p
-            className={`text-center text-uppercase fs-4 ${
-              props.title !== null ? "text-warning" : "text-dark"
-            }`}
-          >
-           
-          </p> */}
+        <Modal.Body className="recapca">
           {props.title ? (
             Object.values(props.title)
               .filter((i) => i !== null)

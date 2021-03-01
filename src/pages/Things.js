@@ -1,15 +1,19 @@
 import React from "react";
 
 const Things = () => {
+  const background = "/images/wallpi.jpg";
+
   return (
-    <div className="main">
+    <div
+      className="main reg_background"
+    >
       <section id="two">
         <div className="container">
           <h3 className="thing_c">Things I Can Do</h3>
           <p className="major_tex">
-            Integer eu ante ornare amet commetus vestibulum blandit integer in
-            curae ac faucibus integer non. Adipiscing cubilia elementum integer
-            lorem ipsum dolor sit amet.
+            These are some of the technologies I use: HTML, CSS, SASS,
+            Javascript, React, React Native, Git, Node.js, Express.js, SQL ,
+            MongoDB,Bootstrap,Semantic UI
           </p>
           <ul className="feature-icons my-t">
             <li className="fab fa-html5 fs-4 fw-bolder">

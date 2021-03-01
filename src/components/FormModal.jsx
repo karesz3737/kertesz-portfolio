@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Card } from "react-bootstrap";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import validate from "../data/validate";
@@ -52,6 +52,7 @@ const FormModal = (props) => {
     props.onHide();
     formRef.current.reset();
   };
+  const background = "/images/grey.jpg";
 
   return (
     <div>
@@ -72,7 +73,16 @@ const FormModal = (props) => {
             Your Email
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
+            backgroundPosition: "center bottom",
+            backgroundAttachment: "fixed",
+            // height: "100vh",
+            backgroundSize: " contain",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <form onSubmit={formSubmit} ref={formRef}>
             <div className="form-floating my-2">
               <input

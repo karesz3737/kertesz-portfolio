@@ -2,9 +2,11 @@ const DTobj = [
   {
     id: "flesh",
     title: "React Native Mobile Flash Cards App",
-    description: " App made with React ,React Native and Redux",
+    rdimage: "images/iphone.png",
+    description: "React Native Application",
     titlePhoto: "/Flascards/Succes.png",
     technologies: ["react", "react-native", "redux"],
+    modalPhoto: "/modalimages/Question.png",
     caruselPhotos: [
       "/Flascards/DEck.png",
       "/Flascards/Reset.png",
@@ -16,15 +18,18 @@ const DTobj = [
     icon: [
       "/iconImages/react.png",
       "/iconImages/react-native.png",
-      "/iconImages/redux-r.png",
+      "/iconImages/redux.png",
     ],
+    type: "mobile",
   },
   {
     id: "reastaurant",
     title: "React Native Restaurant App",
-    description: "App made with Rect ,React Native and Redux",
+    rdimage: "images/iphone.png",
+    description: "React native Application",
     titlePhoto: "/Restauran-app-screens/Main.png",
     technologies: ["react", "react-native", "redux"],
+    modalPhoto: "/modalimages/Category.png",
     caruselPhotos: [
       "/Restauran-app-screens/Main.png",
       "/Restauran-app-screens/android/DetailS.png",
@@ -36,22 +41,36 @@ const DTobj = [
     icon: [
       "/iconImages/react.png",
       "/iconImages/react-native.png",
-      "/iconImages/redux-r.png",
+      "/iconImages/redux.png",
     ],
+    type: "mobile",
   },
-  // {
-  //   id: "portfolio",
-  //   title: "Karoly Kertesz Portfolio Website",
-  //   description: "",
-  //   technologies: ["react", "Node", "express"],
-  //   iconImages: [
-  //     "/iconImages/html.png",
-  //     "/iconImages/css.png",
-  //     "/iconImages/react.png",
-  //     "/iconImages/node.png",
-  //     "/iconImages/express.png",
-  //   ],
-  //   photos: [],
-  // },
+  {
+    id: "portfolio",
+    title: "Karoly Kertesz Portfolio Website",
+    rdimage: "images/laptopnpg.png",
+    description:
+      "Yes, This is my Portfolio Website you are Viewing Right Now 😊 😄!",
+    titlePhoto: "/portfolio/things.png",
+    technologies: ["react", "node", "express,html,css,bootstap"],
+    modalPhoto: "/modalimages/form-modal.png",
+    caruselPhotos: [
+      "/portfolio/carusel.png",
+      "/portfolio/form-modal.png",
+      "/portfolio/things.png",
+      "/portfolio/contact.png",
+      "/portfolio/carousel-mb.png",
+      "/portfolio/carousel-web.png",
+    ],
+    icon: [
+      "/iconImages/html.png",
+      "/iconImages/css.png",
+      "/iconImages/react.png",
+      "/iconImages/node.png",
+      "/iconImages/express.png",
+      "/iconImages/bootstrap.png",
+    ],
+    type: "web",
+  },
 ];
 export default DTobj;

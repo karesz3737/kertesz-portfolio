@@ -16,7 +16,7 @@ const mainPic = () => {
         </div>
         <div className="head_left">
           <blockquote>
-            <p>
+            <p className="main_tex_main">
               “Creativity is just connecting things.”
               <br />― Steve Jobs
             </p>

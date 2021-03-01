@@ -7,9 +7,18 @@ const Footer = () => {
   const [showModal, setShowModal] = useState(false);
   const setM = () => {
     setShowModal(true);
-    console.log("modal.....");
   };
-
+  const smallWindow = window.innerWidth < 600;
+  const largeWindow = window.innerWidth >= 600;
+  const OnenSmallWindow = (url) => {
+    window.open(
+      url,
+      "Ratting",
+      smallWindow
+        ? "width=350,height=370,left=150,top=200,toolbar=0,status=0"
+        : "width=600,height=570,left=150,top=200,toolbar=0,status=0"
+    );
+  };
   return (
     <div className="footer_main">
       <FormModal show={showModal} onHide={() => setShowModal(false)} />
@@ -18,15 +27,19 @@ const Footer = () => {
         <ul className="icons">
           <li>
             <a
-              href="https://www.linkedin.com/in/karolykertesz"
               className="icon brands fab fa-linkedin"
               target="_blank"
+              onClick={() =>
+                OnenSmallWindow("https://www.linkedin.com/in/karolykertesz")
+              }
             ></a>
           </li>
 
           <li>
             <a
-              href="https://github.com/karolykertesz"
+              onClick={() =>
+                OnenSmallWindow("https://github.com/karolykertesz")
+              }
               className="icon brands fa-github"
               target="_blank"
             >

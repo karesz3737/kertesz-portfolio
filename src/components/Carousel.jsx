@@ -6,26 +6,25 @@ import DTobj from "../data/data";
 
 export default function ControlledCarousel() {
   const { id } = useParams();
-  const background = "/images/waterw.jpg";
 
   const car = id && DTobj.find((y) => y.id === id);
-
+  const type = car.type === "mobile" ? "img_carusel" : "img_carusel_web";
+  const car_ic = car.type === "mobile" ? "carusel_icon" : "carusel_icon_web";
 
   return (
-    <div className="col-md-8 mx-auto carusel_top">
-      <div>
-        <Carousel className="mx-auto my-auto carusel_icon" interval={null}>
-          {car.caruselPhotos.map((item) => (
-            <Carousel.Item>
-              <img
-                src={process.env.PUBLIC_URL + item}
-                className="d-block w-100 img_carusel"
-              />
-            </Carousel.Item>
-          ))}
-        </Carousel>
+    <div className="accomp_background">
+      <div className="col-md-8 carusel_top">
+        <div>
+          <Carousel className={car_ic} interval={null}>
+            {car.caruselPhotos.map((item) => (
+              <Carousel.Item>
+                <img src={process.env.PUBLIC_URL + item} className={type} />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+        <CarouselBottom id={id} />
       </div>
-      <CarouselBottom id={id} />
     </div>
   );
 }
