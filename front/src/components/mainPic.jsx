@@ -5,7 +5,7 @@ const mainPic = () => {
       <section className="header_main ">
         <div className="image_inner main_pic_cont">
           <img
-            src={`${process.env.PUBLIC_URL}/images/kerteszkaroly.jpg`}
+            src={process.env.PUBLIC_URL + "/images/kerteszkaroly.jpg"}
             alt="kertesz"
           />
         </div>
