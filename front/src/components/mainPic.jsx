@@ -1,6 +1,6 @@
 import React from "react";
 const mainPic = () => {
-  const image = "/images/laptop.jpg";
+  const image = "/images/kerteszkaroly.jpg";
   return (
     <div className="container-fluid ">
       <section className="header_main ">
