@@ -1,13 +1,11 @@
 import React from "react";
 const mainPic = () => {
+  const image = "/images/kerteszkaroly.jpg";
   return (
     <div className="container-fluid ">
       <section className="header_main ">
         <div className="image_inner main_pic_cont">
-          <img
-            src={process.env.PUBLIC_URL + "/images/kerteszkaroly.jpg"}
-            alt="kertesz"
-          />
+          <img src={process.env.PUBLIC_URL + image} alt="kertesz" />
         </div>
         <div className="head_left">
           <blockquote>
