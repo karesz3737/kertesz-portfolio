@@ -80,5 +80,5 @@ const DTobj = [
   },
 ];
 
-export const image = "/images/DSC.jpg";
+export const image = "/images/KerteszKaroly.jpg";
 export default DTobj;
