@@ -79,4 +79,6 @@ const DTobj = [
     gitHub: "https://github.com/karolykertesz/kertesz-portfolio",
   },
 ];
+
+export const image = "/images/DSC.jpg";
 export default DTobj;

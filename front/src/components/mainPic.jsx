@@ -1,6 +1,6 @@
 import React from "react";
+import { image } from "../data/data";
 const mainPic = () => {
-  const image = "/images/DSC.jpg";
   return (
     <div className="container-fluid ">
       <section className="header_main ">
