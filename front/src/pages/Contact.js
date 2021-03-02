@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <div
-      className="reg_background"
+      className="accomp_background"
       style={{
         float: "left",
       }}

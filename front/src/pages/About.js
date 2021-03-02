@@ -4,7 +4,7 @@ import MainPic from "../components/mainPic.jsx";
 const About = () => {
   return (
     <div
-      className="reg_background major_out_cont"
+      className="accomp_background major_out_cont"
     >
       <p className="major_tex">
         Hi, I'm Karoly Kertesz. <br /> I’m a Budapest, Hungary based developer

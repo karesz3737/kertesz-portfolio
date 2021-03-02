@@ -4,7 +4,7 @@ const Things = () => {
 
   return (
     <div
-      className="main reg_background"
+      className="main accomp_background"
     >
       <section id="two">
         <div className="container">
