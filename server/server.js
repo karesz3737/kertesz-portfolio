@@ -36,4 +36,4 @@ app.post("/api", async (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 8080, console.log("Server running 🐊"));
+app.listen(process.env.PORT || 8080, console.log("Server running 🐊 ⌛"));
