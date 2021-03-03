@@ -15,7 +15,7 @@ const Info = ({ id, type }) => {
       <Link to={`/${id}`}>
         <i className="far fa-images solid fa-2x icon-project"></i>
       </Link>
-      <a to={`${item.gitHub}`}>
+      <a href={`${item.gitHub}`}>
         <i className="fab fa-github-square solid fa-2x icon-project"></i>
       </a>
       <span style={{ display: "none" }}>
