@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MainPic from "../components/mainPic.jsx";
 
 const About = () => {
-  const backgroundI = "/images/wallpi.jpg";
-  const [back, setBack] = useState(null);
-  useEffect(() => {
-    setBack(backgroundI);
-  }, [back]);
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
-        backgroundPosition: "top center",
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2019/01/27/16/17/winter-3958406_960_720.jpg")`,
+        backgroundPosition: "center",
         backgroundAttachment: "fixed",
         height: "100vh",
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         filter: "sepia(20%)",
+        position: "fixed",
       }}
       className=" major_out_cont"
     >

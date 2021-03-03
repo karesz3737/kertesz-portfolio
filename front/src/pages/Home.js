@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 const Home = () => {
-  const backgroundI = "/images/laptop.jpg";
-  const [back, setBack] = useState(null);
-  useEffect(() => {
-    setBack(backgroundI);
-  }, [back]);
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_960_720.jpg")`,
         backgroundPosition: "top center",
         backgroundAttachment: "fixed",
         height: "100vh",
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        filter: "sepia(20%)",
+        filter: "sepia(40%)",
       }}
     >
       <section className="section_text">

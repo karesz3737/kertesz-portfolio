@@ -5,11 +5,7 @@ import ReCaptchaError from "../components/reCaptchaError";
 import validate from "../data/validate";
 
 const Contact = () => {
-  const backgroundI = "/images/wallpi.jpg";
-  const [back, setBack] = useState(null);
-  useEffect(() => {
-    setBack(backgroundI);
-  }, [back]);
+ 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -66,15 +62,15 @@ const Contact = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
-        backgroundPosition: "top center",
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2019/01/27/16/17/winter-3958406_960_720.jpg")`,
+        backgroundPosition: "center",
         backgroundAttachment: "fixed",
         height: "100vh",
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         filter: "sepia(20%)",
-        float: "left",
+        position: "fixed",
       }}
     >
       <div className="container-fluid">

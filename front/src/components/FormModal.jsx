@@ -52,7 +52,7 @@ const FormModal = (props) => {
     props.onHide();
     formRef.current.reset();
   };
-  const background = "/images/grey.jpg";
+
 
   return (
     <div>
@@ -75,7 +75,7 @@ const FormModal = (props) => {
         </Modal.Header>
         <Modal.Body
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
+            backgroundImage: `url("https://cdn.pixabay.com/photo/2018/01/13/04/40/brick-wall-3079574_960_720.jpg")`,
             backgroundPosition: "center bottom",
             backgroundAttachment: "fixed",
             // height: "100vh",

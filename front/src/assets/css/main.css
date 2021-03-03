@@ -2505,17 +2505,20 @@ header h6+p {
   line-height: 1.5em;
 }
 
-header.major h2 {
-  color: #5d646e;
-  font-size: 1.2em;
+header.major h3 {
+  color: rgb(236, 225, 225);
+  font-size: 1.4em;
   text-shadow: 5px 5px 10px rgb(92, 81, 81);
+  position: fixed;
 
 }
 
 .main_tex_main {
   text-shadow: 2px 4px 4px rgb(121, 112, 112);
-  float: right;
-  padding-bottom: 80px;
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  color: black;
 }
 
 
@@ -2538,18 +2541,13 @@ header.major h2+p {
 
 }
 
-
-
 .major_tex {
-  color: #5d646e;
-  margin: 3.375em 0;
-  font-size: .7em;
-  font-weight: 600;
+  margin: 2.375em 0;
+  font-size: 900;
+  font-weight: 800;
   margin-left: 50px;
   line-height: 1.9em;
   text-shadow: 5px 5px 10px rgb(134, 131, 131);
-  font-family: "Merriweather";
-
 
 }
 
@@ -2557,10 +2555,11 @@ header.major h2+p {
 @media screen and (min-width: 550px) {
   .major_tex {
     font-family: 'Dancing Script';
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 900;
     text-shadow: 5px 5px 10px rgb(88, 86, 86);
     line-height: 1.4em;
+    color: #08172c;
 
   }
 }
@@ -2809,22 +2808,22 @@ input[type="radio"]+label:before {
 
 .ic button {
   border: none !important;
-  background-color: #d9dee7;
+  background-color: rgba(233, 222, 222, 0.8);
   color: #fff;
 
 }
 
 .ici {
-  background-color: rgba(155, 147, 147, 0.8);
+  background-color: rgba(192, 186, 186, 0.8);
   border: none !important;
 }
 
 .ici:hover {
-  background-color: #cccc;
+  background-color: rgba(192, 186, 186, 0.8);
 }
 
 .ici:active {
-  background-color: #cccc !important;
+  background-color: rgba(240, 228, 228, 0.8) !important;
   box-shadow: none !important;
 }
 
@@ -3329,7 +3328,7 @@ input[type="button"]:disabled,
 /* 4acaa8 */
 
 .nav-col {
-  background-color: #d9dee7;
+  background-color: rgb(226, 224, 224);
 }
 
 .animate {
@@ -3373,7 +3372,7 @@ input[type="button"]:disabled,
 
 .footer_main {
   width: 100%;
-  background-color: #d9dee7;
+  background-color: rgb(226, 224, 224);
   height: 3em;
   position: fixed;
   bottom: 0;

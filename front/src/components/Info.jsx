@@ -9,13 +9,13 @@ const Info = ({ id, type }) => {
   const onclose = () => setModalShow(false);
   return (
     <div className={type === "mobile" ? "info_row" : "info_row_web"}>
-      <Link onClick={() => setModalShow(true)}>
-        <i class="fas fa-info-circle icon solid fa-2x  icon-project"></i>
-      </Link>
+      <a onClick={() => setModalShow(true)}>
+        <i className="fas fa-info-circle icon solid fa-2x  icon-project"></i>
+      </a>
       <Link to={`/${id}`}>
         <i className="far fa-images solid fa-2x icon-project"></i>
       </Link>
-      <a href={`${item.gitHub}`}>
+      <a to={`${item.gitHub}`}>
         <i className="fab fa-github-square solid fa-2x icon-project"></i>
       </a>
       <span style={{ display: "none" }}>

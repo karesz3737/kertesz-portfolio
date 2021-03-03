@@ -12,7 +12,19 @@ export default function ControlledCarousel() {
   const car_ic = car.type === "mobile" ? "carusel_icon" : "carusel_icon_web";
 
   return (
-    <div className="accomp_background">
+    <div
+      style={{
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2017/08/30/09/07/pattern-2696389_960_720.jpg")`,
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        filter: "sepia(15%)",
+        position: "fixed",
+      }}
+    >
       <div className="col-md-8 carusel_top">
         <div>
           <Carousel className={car_ic} interval={null}>

@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DTobj from "../data/data";
 import Info from "../components/Info.jsx";
 import ItemTitle from "../components/ItemTitle.jsx";
 const MyProjects = () => {
-  const backgroundI = "/images/wallpi.jpg";
-  const [back, setBack] = useState(null);
-  useEffect(() => {
-    setBack(backgroundI);
-  }, [back]);
   return (
     <div
       className="col-12"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
-        backgroundPosition: "top center",
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2017/08/30/09/07/pattern-2696389_960_720.jpg")`,
+        backgroundPosition: "center",
         backgroundAttachment: "fixed",
         height: "100vh",
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        filter: "sepia(20%)",
-        float: "left",
+        filter: "sepia(15%)",
+        position: "fixed",
       }}
     >
       <div className="row my-3">
@@ -42,8 +37,8 @@ const MyProjects = () => {
       <div className="row">
         <ul className="mobil_u">
           {DTobj.filter((i) => i.type === "web").map((item, indx) => (
-            <div className="ddd">
-              <li key={indx} className="img_cont_web">
+            <div className="ddd" key={indx}>
+              <li className="img_cont_web">
                 <ItemTitle title={item.title} />
 
                 <img
