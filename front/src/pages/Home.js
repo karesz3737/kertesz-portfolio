@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 const Home = () => {
-  const background = "/images/laptop.jpg";
+  const backgroundI = "/images/laptop.jpg";
+  const [back, setBack] = useState(null);
+  useEffect(() => {
+    setBack(backgroundI);
+  }, [back]);
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + background})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
         backgroundPosition: "top center",
         backgroundAttachment: "fixed",
         height: "100vh",

@@ -5,6 +5,11 @@ import ReCaptchaError from "../components/reCaptchaError";
 import validate from "../data/validate";
 
 const Contact = () => {
+  const backgroundI = "/images/wallpi.jpg";
+  const [back, setBack] = useState(null);
+  useEffect(() => {
+    setBack(backgroundI);
+  }, [back]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -60,8 +65,15 @@ const Contact = () => {
 
   return (
     <div
-      className="accomp_background"
       style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
+        backgroundPosition: "top center",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        filter: "sepia(20%)",
         float: "left",
       }}
     >

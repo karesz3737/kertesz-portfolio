@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Things = () => {
-
+  const backgroundI = "/images/wallpi.jpg";
+  const [back, setBack] = useState(null);
+  useEffect(() => {
+    setBack(backgroundI);
+  }, [back]);
   return (
     <div
-      className="main accomp_background"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
+        backgroundPosition: "top center",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        filter: "sepia(20%)",
+      }}
     >
       <section id="two">
         <div className="container">

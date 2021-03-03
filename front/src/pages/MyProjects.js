@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DTobj from "../data/data";
 import Info from "../components/Info.jsx";
 import ItemTitle from "../components/ItemTitle.jsx";
 const MyProjects = () => {
+  const backgroundI = "/images/wallpi.jpg";
+  const [back, setBack] = useState(null);
+  useEffect(() => {
+    setBack(backgroundI);
+  }, [back]);
   return (
-    <div className="mmm col-12 accomp_background">
-      <div className="row">
+    <div
+      className="col-12"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + back})`,
+        backgroundPosition: "top center",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        filter: "sepia(20%)",
+        float: "left",
+      }}
+    >
+      <div className="row my-3">
         <ul className="mobil_u">
           {DTobj.filter((i) => i.type === "mobile").map((item, indx) => (
             <li key={indx} className="img_cont_mob">

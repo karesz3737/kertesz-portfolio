@@ -642,7 +642,7 @@ span.carousel-control-prev-icon {
 }
 
 
-.mmm {
+/* .mmm {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -656,7 +656,7 @@ span.carousel-control-prev-icon {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
+} */
 
 .info_container {
   margin-right: 30px;
@@ -769,7 +769,7 @@ span.carousel-control-prev-icon {
   background-image: linear-gradient(to right, rgb(245, 238, 238), rgb(241, 241, 234));
 }
 
-.reg_background {
+/* .reg_background {
   width: 100%;
   height: 100%;
   background-image: url("../../img/wallpi.jpg");
@@ -781,9 +781,24 @@ span.carousel-control-prev-icon {
   -webkit-box-shadow: inset 0 15px 10px -9px #787878;
   box-shadow: inset 0 15px 10px -9px #787878;
   float: left;
-}
+} */
 
-.accomp_background {
+/* .home_background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/laptop.jpg");
+  background-position: "top center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: sepia(10%);
+  -webkit-box-shadow: inset 0 15px 10px -9px #787878;
+  box-shadow: inset 0 15px 10px -9px #787878;
+  float: left;
+
+} */
+
+/* .accomp_background {
   width: 100%;
   height: 100%;
   background-image: url("../../img/pexels-henry.jpg");
@@ -796,7 +811,7 @@ span.carousel-control-prev-icon {
   box-shadow: inset 0 15px 10px -9px #787878;
   float: left;
 
-}
+} */
 
 
 

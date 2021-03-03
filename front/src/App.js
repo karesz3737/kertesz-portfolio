@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -11,15 +11,11 @@ import Carousel from "./components/Carousel";
 import About from "./pages/About";
 
 function App() {
+
+
   return (
     <div
-      style={{
-        backgroundPosition: "center bottom",
-        backgroundAttachment: "fixed",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+
     >
       <Router>
         <Navigation />
