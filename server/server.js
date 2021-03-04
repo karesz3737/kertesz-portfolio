@@ -22,7 +22,7 @@ app.post("/api", async (req, res) => {
   const { email, subject, text, name } = req.body;
 
   const value = validate(email, subject, text, name);
-  console.log(value);
+
   if (value !== undefined) {
     res.status(400);
     return;

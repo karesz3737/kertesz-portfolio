@@ -16,7 +16,6 @@ const FormModal = (props) => {
 
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
-    console.log(response);
   };
   const reChange = (value) => {
     SetToken(value);
@@ -52,7 +51,6 @@ const FormModal = (props) => {
     props.onHide();
     formRef.current.reset();
   };
-
 
   return (
     <div>

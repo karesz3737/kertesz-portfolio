@@ -20,7 +20,6 @@ const Contact = () => {
   const nameRef = useRef();
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
-    console.log(response);
   };
   const reChange = (value) => {
     SetToken(value);
