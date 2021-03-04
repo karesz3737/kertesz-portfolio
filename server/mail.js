@@ -2,26 +2,47 @@ require("dotenv").config();
 const mailGun = require("nodemailer-mailgun-transport");
 const express = require("express");
 const nodemailer = require("nodemailer");
-const auth = {
+// const auth = {
+//   auth: {
+//     api_key: process.env.API_KEY,
+//     domain: process.env.DOMAIN_KEY,
+//   },
+// };
+
+var transport = nodemailer.createTransport({
+  host: "smtp-mail.outlook.com",
+  secureConnection: false,
+  port: 587,
   auth: {
-    api_key: process.env.API_KEY,
-    domain: process.env.DOMAIN_KEY,
+    user: process.env.us,
+    pass: process.env.PASSWORD,
   },
-};
+});
 
 module.exports = SendUserEmail = (email, subject, text, name, cb) => {
-  const transporter = nodemailer.createTransport(mailGun(auth));
   const mailOptions = {
-    from: email,
+    from: process.env.us,
     to: process.env.EMAIL_KEY,
-    subject,
-    text: `from :${name}    :       The Message : ${text}`,
+    subject: "email from kerteszk.net",
+    html: `<b>Sender: ${name}</b>
+    <b>Email: ${email}</b>
+    <b>subject: ${subject}</b>
+    <b>Message: ${text}</b> 
+    `,
   };
-  transporter.sendMail(mailOptions, (err, info) => {
+
+  transport.sendMail(mailOptions, (err, info) => {
     if (err) {
       cb(err, null);
     } else {
       cb(null, info);
     }
   });
+  // transport.sendMail(mailOptionsTwo, (err, info) => {
+  //   if (err) {
+  //     cb(err, null);
+  //   } else {
+  //     cb(null, info);
+  //   }
+  // });
 };
