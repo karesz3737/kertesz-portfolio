@@ -303,7 +303,12 @@ a {
 
 .my-t span {
   font-family: "Merriweather";
+
+
+
 }
+
+
 
 .inner-div {
   display: flex;
@@ -328,7 +333,7 @@ a {
   background-color: #c3ccca;
   text-align: center;
   border-radius: 2px;
-  font-family: "Lato";
+  font-family: "Merriweather";
   color: whitesmoke;
 }
 
@@ -337,6 +342,36 @@ a {
   text-align: center;
   border-radius: 2px;
   font-family: "Lato";
+}
+
+.mmmm {
+  line-height: 1.8em;
+  font-family: "Merriweather";
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* .main-pic {
+
+  margin-right: 150px;
+  margin-bottom: 100px;
+
+} */
+
+@media screen and (min-width: 600px) {
+
+  .mmmm {
+    line-height: 2.1em;
+    font-family: 'Dancing Script';
+    font-size: 19px;
+    font-weight: 900;
+    text-align: center;
+
+
+
+  }
+
 }
 
 
@@ -2542,11 +2577,10 @@ header.major h2+p {
 }
 
 .major_tex {
-  margin: 2.375em 0;
-  font-size: 900;
+  margin: 1em 0;
+  font-size: 400;
   font-weight: 800;
-  margin-left: 50px;
-  line-height: 1.9em;
+  line-height: 1.2em;
   text-shadow: 5px 5px 10px rgb(134, 131, 131);
 
 }
@@ -2564,8 +2598,9 @@ header.major h2+p {
   }
 }
 
+
 .major_out_cont {
-  position: fixed;
+  position: relative
 }
 
 
@@ -3109,6 +3144,38 @@ ul.feature-icons li:before {
   top: 0;
   width: 2.5em;
 }
+
+
+
+@media screen and (max-width: 650px) {
+  .my-t {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(105, 93, 93);
+    font-family: "Merriweather";
+
+  }
+
+
+
+  ul.feature-icons li {
+    margin: 0 0 1.6875em 0;
+    padding: 0.35em 0 0 3.5em;
+  }
+
+  ul.feature-icons li:before {
+    line-height: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    font-weight: 600;
+
+  }
+
+
+
+
+}
+
 
 /* Icons */
 

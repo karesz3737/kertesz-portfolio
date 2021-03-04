@@ -23,7 +23,7 @@ const Things = () => {
             Javascript, React, React Native, Git, Node.js, Express.js, SQL ,
             MongoDB,Bootstrap,Semantic UI
           </p>
-          <ul className="feature-icons my-t">
+          <ul className="feature-icons icon_cony">
             <li className="fab fa-html5 fs-4 fw-bolder">
               <span className="my-t">HTML</span>
             </li>

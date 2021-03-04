@@ -5,7 +5,6 @@ import ReCaptchaError from "../components/reCaptchaError";
 import validate from "../data/validate";
 
 const Contact = () => {
- 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -20,6 +19,7 @@ const Contact = () => {
   const nameRef = useRef();
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
+
   };
   const reChange = (value) => {
     SetToken(value);
@@ -78,7 +78,7 @@ const Contact = () => {
             <div className="container">
               <span className="contact-text">
                 <h3 className="text-center">Contact Me</h3>
-                <p>
+                <p className="my-1 my-md-2">
                   If you would like to chat about a project or are interested in
                   hiring me, please send me a message.
                 </p>

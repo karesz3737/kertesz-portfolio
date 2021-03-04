@@ -17,7 +17,7 @@ const About = () => {
       }}
       className=" major_out_cont"
     >
-      <p className="major_tex">
+      <p className="mmmm">
         Hi, I'm Karoly Kertesz. <br /> I’m a Budapest, Hungary based developer
         skilled in Javascript and React framework.
         <br />I have a serious passion for creating intuitive, dynamic user
@@ -27,8 +27,9 @@ const About = () => {
         world challenges.
         <br />
         When I’m not writing code I love playing with my dog or watch coding
-        tutorials.{" "}
+        tutorials.
       </p>
+
       <MainPic />
     </div>
   );

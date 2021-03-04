@@ -9,9 +9,9 @@ const Info = ({ id, type }) => {
   const onclose = () => setModalShow(false);
   return (
     <div className={type === "mobile" ? "info_row" : "info_row_web"}>
-      <a onClick={() => setModalShow(true)}>
+      <Link onClick={() => setModalShow(true)}>
         <i className="fas fa-info-circle icon solid fa-2x  icon-project"></i>
-      </a>
+      </Link>
       <Link to={`/${id}`}>
         <i className="far fa-images solid fa-2x icon-project"></i>
       </Link>

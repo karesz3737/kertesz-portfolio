@@ -11,6 +11,7 @@ const Home = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         filter: "sepia(40%)",
+        position: "fixed",
       }}
     >
       <section className="section_text">

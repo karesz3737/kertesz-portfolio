@@ -2,28 +2,22 @@ require("dotenv").config();
 const mailGun = require("nodemailer-mailgun-transport");
 const express = require("express");
 const nodemailer = require("nodemailer");
-// const auth = {
-//   auth: {
-//     api_key: process.env.API_KEY,
-//     domain: process.env.DOMAIN_KEY,
-//   },
-// };
 
 var transport = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
-  secureConnection: false,
-  port: 587,
+  host: "smtp.zoho.eu",
+  secureConnection: true,
+  port: 465,
   auth: {
-    user: process.env.us,
+    user: process.env.US_DOM,
     pass: process.env.PASSWORD,
   },
 });
 
 module.exports = SendUserEmail = (email, subject, text, name, cb) => {
   const mailOptions = {
-    from: process.env.us,
+    from: process.env.US_DOM,
     to: process.env.EMAIL_KEY,
-    subject: "email from kerteszk.net",
+    subject: "email zoho",
     html: `<b>Sender: ${name}</b>
     <b>Email: ${email}</b>
     <b>subject: ${subject}</b>
@@ -31,18 +25,28 @@ module.exports = SendUserEmail = (email, subject, text, name, cb) => {
     `,
   };
 
+  const emailReply = {
+    from: process.env.US_DOM,
+    to: email,
+    subject: "Thank You",
+    html: `<b>Dear ${name}</b/>
+  <p> Thank You very much For Your Email I will get back to you as soon as I can 👋!</p>
+  <p>Have a great day!</p>
+  <p>Regards Karoly Kertesz</p>
+  
+  `,
+  };
+
   transport.sendMail(mailOptions, (err, info) => {
     if (err) {
       cb(err, null);
     } else {
+      transport.sendMail(emailReply, (err, info) => {
+        if (err) {
+          console.log(err);
+        }
+      });
       cb(null, info);
     }
   });
-  // transport.sendMail(mailOptionsTwo, (err, info) => {
-  //   if (err) {
-  //     cb(err, null);
-  //   } else {
-  //     cb(null, info);
-  //   }
-  // });
 };
