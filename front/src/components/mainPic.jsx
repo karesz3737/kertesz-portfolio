@@ -2,7 +2,7 @@ import React from "react";
 import { image } from "../data/data";
 const mainPic = () => {
   return (
-    <div className="container-fluid main-p my-2 py-3">
+    <div className="container-fluid main-p">
       <section className="header_main ">
         <div className="image_inner main_pic_cont">
           <img src={`${image}`} alt="kertesz" />
