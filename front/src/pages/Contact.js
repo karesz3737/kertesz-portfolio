@@ -19,7 +19,6 @@ const Contact = () => {
   const nameRef = useRef();
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
-
   };
   const reChange = (value) => {
     SetToken(value);
@@ -94,7 +93,7 @@ const Contact = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       ref={nameRef}
-                      className="form-control w-100"
+                      className="form-control w-100 "
                     />
                   </div>
                   <div className="col-6 col-12-xsmall">
@@ -130,11 +129,11 @@ const Contact = () => {
                       value={text}
                       ref={textRef}
                       onChange={(e) => Setmessage(e.target.value)}
-                      className="form-control"
+                      className="form-control text-area"
                     ></textarea>
                   </div>
-                  <div className="col-12">
-                    <ul className="actions">
+                  <div className="col-12 ">
+                    <ul className="btn_container_form">
                       <li>
                         <input
                           type="submit"
@@ -160,7 +159,7 @@ const Contact = () => {
               size="normal"
               ref={reRef}
               onChange={reChange}
-              // badge="bottomleft"
+              // badge="inline"
             />
           </div>
         </div>
