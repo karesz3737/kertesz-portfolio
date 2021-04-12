@@ -3,9 +3,11 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import ReCaptchaError from "../components/reCaptchaError";
 import validate from "../data/validate";
+import Loader from "../components/Loader";
 
 const Contact = () => {
   const [name, setName] = useState("");
+  const [lodading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [text, Setmessage] = useState("");
@@ -19,6 +21,11 @@ const Contact = () => {
   const nameRef = useRef();
   const AxioAsync = async (v) => {
     const response = await axios.post("/api", v);
+    console.log(response);
+    if (response.status === 200) {
+      console.log(response.data, "with data");
+      console.log(response, "with");
+    }
   };
   const reChange = (value) => {
     SetToken(value);
@@ -49,14 +56,18 @@ const Contact = () => {
     } else {
       if (token) {
         setErreor(null);
-        setShowError(true);
-        AxioAsync(DataObj);
+        setLoading(true);
+        AxioAsync(DataObj)
+          .then(() => setLoading(false))
+          .then(() => setShowError(true));
+        setRefBack();
       }
     }
-    setRefBack();
-    reRef.current.reset();
   };
-
+  if (lodading) {
+    return <Loader />;
+  }
+  console.log(lodading);
   return (
     <div
       style={{

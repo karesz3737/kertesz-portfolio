@@ -18,7 +18,7 @@ const MyProjects = () => {
         position: "fixed",
       }}
     >
-      <div className="row my-3">
+      <div className="row my-2">
         <ul className="mobil_u">
           {DTobj.filter((i) => i.type === "mobile").map((item, indx) => (
             <li key={indx} className="img_cont_mob">

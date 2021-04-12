@@ -25,7 +25,7 @@ export default function ControlledCarousel() {
         position: "fixed",
       }}
     >
-      <div className="col-md-8 carusel_top">
+      <div className="col-md-8 carusel_top mt-1">
         <div>
           <Carousel className={car_ic} interval={null}>
             {car.caruselPhotos.map((item) => (

@@ -1,5 +1,45 @@
 const DTobj = [
   {
+    id: "rn-shopping",
+    title: "React Native Shopping App",
+    rdimage: "images/iphone.png",
+    description:
+      "Very complex React native application, with Google Auth, Stripe Integration, admin panel, invoice and shipping with own server runs on Heroku.",
+
+    titlePhoto: "/portfolio/things.png",
+    technologies: [
+      "react",
+      "react-native",
+      "redux",
+      "node",
+      "express,PostgreSQL",
+    ],
+    modalPhoto: "/modalimages/prod2.png",
+    caruselPhotos: [
+      "/RN-Shopping/Admin.png",
+      "/RN-Shopping/prod2.png",
+      "/RN-Shopping/signup.png",
+      "/RN-Shopping/adminModif.png",
+      "/RN-Shopping/adminPanel.png",
+      "/RN-Shopping/AllProduct.png",
+      "/RN-Shopping/cancelorder.png",
+      "/RN-Shopping/cart.png",
+      "/RN-Shopping/itemincart.png",
+      "/RN-Shopping/shipping.png",
+    ],
+    icon: [
+      "/iconImages/react.png",
+      "/iconImages/node.png",
+      "/iconImages/express.png",
+      "/iconImages/redux.png",
+      "/iconImages/posgres.png",
+      "/iconImages/react-native.png",
+    ],
+    type: "mobile",
+    gitHub: "https://github.com/karolykertesz/RN-APP",
+  },
+
+  {
     id: "flesh",
     title: "React Native Mobile Flash Cards App",
     rdimage: "images/iphone.png",
@@ -49,6 +89,7 @@ const DTobj = [
     type: "mobile",
     gitHub: "https://github.com/karolykertesz/React-native-restaurant-app",
   },
+
   {
     id: "portfolio",
     title: "Karoly Kertesz Portfolio Website",

@@ -1,30 +1,44 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
-import Things from "./pages/Things";
-import MyProjects from "./pages/MyProjects";
-import Contact from "./pages/Contact";
+import Loader from "./components/Loader.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
-import Carousel from "./components/Carousel";
-import About from "./pages/About";
+const Things = lazy(() => import("./pages/Things"));
+const About = lazy(() => import("./pages/About"));
+const MyProjects = lazy(() => import("./pages/MyProjects"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Carousel = lazy(() => import("./components/Carousel.jsx"));
 
 function App() {
   return (
     <div>
       <Router>
         <Navigation />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route component={Things} exact path="/things" />
-          <Route component={MyProjects} exact path="/myprojects" />
-          <Route component={Contact} exact path="/contact" />
-          <Route exact path="/aboutme" component={About} />
-          <Route component={Carousel} exact path="/:id" />
-        </Switch>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/things">
+              <Things />
+            </Route>
+
+            <Route exact path="/myprojects">
+              <MyProjects />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+            <Route exact path="/aboutme">
+              <About />
+            </Route>
+            <Route exact path="/:id">
+              <Carousel />
+            </Route>
+          </Switch>
+        </Suspense>
         <Footer />
       </Router>
     </div>
